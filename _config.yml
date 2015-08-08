@@ -21,7 +21,7 @@ description: "»Webcampak« est une solution robuste, performante et sécurisée
 
 # This URL is the main adresse. Don't include a slash at the end.
 #
-url: "http://webcampak.github.io/webcampak-fr"
+url: "http://webcampak.github.io/website-webcampak-fr"
 baseurl: ""
 
 # This is for the editing function in _/includes/improve_content.html
