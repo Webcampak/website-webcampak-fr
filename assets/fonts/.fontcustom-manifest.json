@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "c5cdc0a58b7277d1f320a4ad50aa8ae2ad47fa6ed879c164db1cfb75439bd1d9",
-    "current": "c5cdc0a58b7277d1f320a4ad50aa8ae2ad47fa6ed879c164db1cfb75439bd1d9"
+    "previous": "526701368e8254fa83adfd7f97b32b3c006d0ba69f1cee5b898a49e5f946f876",
+    "current": "526701368e8254fa83adfd7f97b32b3c006d0ba69f1cee5b898a49e5f946f876"
   },
   "fonts": [
     "./iconfont.ttf",
@@ -25,6 +25,10 @@
     "camera": {
       "codepoint": 61698,
       "source": "svg-files-for-custom-font/camera.svg"
+    },
+    "camerab": {
+      "codepoint": 61750,
+      "source": "svg-files-for-custom-font/camerab.svg"
     },
     "chat": {
       "codepoint": 61699,
@@ -97,6 +101,14 @@
     "feather": {
       "codepoint": 61716,
       "source": "svg-files-for-custom-font/feather.svg"
+    },
+    "flag-english": {
+      "codepoint": 61751,
+      "source": "svg-files-for-custom-font/flag-english.svg"
+    },
+    "flag-french": {
+      "codepoint": 61752,
+      "source": "svg-files-for-custom-font/flag-french.svg"
     },
     "github": {
       "codepoint": 61717,
@@ -239,8 +251,8 @@
     "font_name": "iconfont",
     "force": false,
     "input": {
-      "templates": "svg-files-for-custom-font",
-      "vectors": "svg-files-for-custom-font"
+      "templates": "svg-files-for-custom-font/",
+      "vectors": "svg-files-for-custom-font/"
     },
     "no_hash": true,
     "output": {

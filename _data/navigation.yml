@@ -49,3 +49,8 @@
 - title: "Contact"
   url: "/contact/"
   side: right
+
+- title: " English"
+  url: "http://en.webcampak.com/"
+  side: right
+  icon: "icon-flag-english"
