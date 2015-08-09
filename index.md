@@ -21,7 +21,7 @@ widget-A:
 widget-B:
     title: "Pour vos clients"
     url: '/webcampak/'
-    text: 'Que vous soyez photographe, réalisateur, agence de communication, nous mettons à votre service notre expertise et nos solutions techniques pour vous permettre de réaliser vos projets. Nous mettons à votre disposition nos infrastructures et produits fiables, supervisés 24h/24 et plusieurs années d’expériences, qui vous permettent de livrer à vos clients des projets d’une qualité inégalée.'
+    text: 'Que vous soyez photographe, réalisateur, agence de communication, nous mettons à votre service notre expertise et nos solutions techniques pour vous permettre de réaliser vos projets. Nous mettons à votre disposition nos infrastructures et produits fiables, supervisés 24h/24 et plusieurs années d’expérience, qui vous permettent de livrer à vos clients des projets d’une qualité inégalée.'
 
 widget-1:
     title: "A propos"

@@ -22,7 +22,7 @@ description: "»Webcampak« est une solution robuste, performante et sécurisée
 # This URL is the main adresse. Don't include a slash at the end.
 #
 url: "http://www.webcampak.com"
-baseurl: ""
+baseurl: "http://www.webcampak.com"
 
 # This is for the editing function in _/includes/improve_content.html
 # Leave it empty if your site is not on GitHub/GitHub Pages
