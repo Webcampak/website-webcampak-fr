@@ -6,7 +6,7 @@ show_meta: false
 permalink: "/contact/"
 redirect_from:
     - /fr/contact/
-    - /contact/
+    - /en/contact/
 ---
 
 ## Par email
