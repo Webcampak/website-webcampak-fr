@@ -5,10 +5,10 @@
   class: "services-contact"
   title: "Contact"
 
-- name: "Terms & Conditions"
+- name: "Conditions D'utilisation"
   url: "/terms-and-conditions/"
   class: "services-contact"
-  title: "Terms & Conditions"
+  title: "Conditions D'utilisation"
 
 - name: "RSS"
   url: "/feed.xml"

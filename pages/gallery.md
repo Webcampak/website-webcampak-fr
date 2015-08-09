@@ -8,7 +8,7 @@ redirect_from:
     - /exemples/
 ---
 
-## Webcampak Pictures
+## Images Webcampak
 <ul class="clearing-thumbs small-block-grid-5" data-clearing>
   <li><a href="http://www.webcampak.com/images/blog/2010/07/IMG_1249.jpg"><img data-caption="Webcampak" class="th" src="http://www.webcampak.com/images/blog/2010/07/IMG_1249-150x150.jpg"></a></li>
   <li><a href="http://www.webcampak.com/images/blog/2010/07/IMG_1259.jpg"><img data-caption="Webcampak" class="th" src="http://www.webcampak.com/images/blog/2010/07/IMG_1259-150x150.jpg"></a></li>
@@ -22,7 +22,7 @@ redirect_from:
   <li><a href="http://www.webcampak.com/images/blog/2011/07/WebcampakLocation3.jpg"><img data-caption="Webcampak de location" class="th" src="http://www.webcampak.com/images/blog/2011/07/WebcampakLocation3-150x150.jpg"></a></li>
 </ul>
 
-## Webcampak on the field
+## Webcampak sur le terrain
 <ul class="clearing-thumbs small-block-grid-5" data-clearing>
   <li><a href="http://www.webcampak.com/images/MG_2934.jpg"><img data-caption="Webcampak installé sur un mat de grande hauteur nécessitant un cordiste pour l'accès et l'installation." class="th" src="http://www.webcampak.com/images//MG_2934-150x150.jpg"></a></li>
   <li><a href="http://www.webcampak.com/images/webcampak-high-installation.jpg"><img data-caption="Installation sur un mat de grande hauteur" class="th" src="http://www.webcampak.com/images//webcampak-high-installation-150x150.jpg"></a></li>
@@ -34,7 +34,7 @@ redirect_from:
   <li><a href="http://www.webcampak.com/images/IMG_20121120_131220.png"><img data-caption="Nous avons le permis pour chariot élévateurs" class="th" src="http://www.webcampak.com/images//IMG_20121120_131220-150x150.png"></a></li>
 </ul>
 
-## Videos
+## Vidéos
 <div class="row">
   <div class="large-6 columns">
     <div class="flex-video">
@@ -64,10 +64,10 @@ redirect_from:
   </div>
 </div>
 
-## Webcampak interface (v3.x)
+## Interface Webcampak (v3.x)
 Prochainement...
 
-## Webcampak interface (v2.x)
+## Interface Webcampak (v2.x)
 <ul class="clearing-thumbs small-block-grid-5" data-clearing>
   <li><a href="http://www.webcampak.com/images/wpak2.screenshot.config.capturea-full.en_.png"><img data-caption="Webcampak" class="th" src="http://www.webcampak.com/images//wpak2.screenshot.config.capturea-full.en_-150x150.png"></a></li>
   <li><a href="http://www.webcampak.com/images/wpak2.screenshot.config.capture.en_.png"><img data-caption="Webcampak" class="th" src="http://www.webcampak.com/images//wpak2.screenshot.config.capture.en_-150x150.png"></a></li>
