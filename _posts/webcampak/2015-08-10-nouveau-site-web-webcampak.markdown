@@ -20,6 +20,6 @@ Nous avons donc réalisé une migration vers [jekyll](http://jekyllrb.com/).
 
 Jekyll peut être considéré comme un compilateur de sites web. Il analyse des templates, des fichiers markdown et génère le site web correspondant.
 
-Vu que Jekyll n'utilise pas de fichiers PHP, les besoins de mise à jour et les risques de sécurité en sont grandement réduit. De plus, Github supportant Jekyll nativement, nous pouvons tout héberger là bas.
+Vu que Jekyll n'utilise pas de fichiers PHP, les besoins de mise à jour et les risques de sécurité en sont grandement réduit. De plus, Github supportant Jekyll nativement, nous pouvons tout héberger sur cette plateforme.
 
 {% include list-posts.html tag='header' %}
