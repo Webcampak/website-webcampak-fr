@@ -2,7 +2,7 @@
 layout: page
 subheadline: "Corporate"
 title: "Webcampak 3.0 est 'feature complete'"
-date: 2015-08-10 10:00:00+00:00
+date: 2016-08-15 10:00:00+00:00
 teaser: "Après presque 18 mois à travailler sur la nouvelle mouture du Webcampak, nous nous approchons de la fin du dévelopement"
 header:
     image_fullwidth: "header_typewriter.jpg"
