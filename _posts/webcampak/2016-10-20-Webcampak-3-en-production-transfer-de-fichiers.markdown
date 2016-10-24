@@ -53,7 +53,7 @@ Le Webcampak n'avait donc pas conscience de cette difficulté (une coupure rése
 
 ### Fonctionnement du mode Xfer
 
-Lorsque ce mode de transfer est utilisé, plusieurs files d'attentes sont crées, chacune de ces files d'attendre recevra un order de traitement pour l'envoi des fichiers. Les files d'attentes sont communes à l'ensemble du Webcampak et isolées des autres processus de traitement (une source envoi un ordre au système xfer, mais n'agit pas directement sur la file d'attente).
+Lorsque ce mode de transfer est utilisé, plusieurs files d'attentes sont crées, chacune de ces files d'attendre recevra un ordre de traitement pour l'envoi des fichiers. Les files d'attentes sont communes à l'ensemble du Webcampak et isolées des autres processus de traitement (une source envoi un ordre au système xfer, mais n'agit pas directement sur la file d'attente).
 
 [![]({{ site.urlimg }}webcampak.sysconf_600x218.png)]({{ site.urlimg }}webcampak.sysconf.png)
 
