@@ -1,67 +1,78 @@
 ---
 layout: page
 subheadline: "Corporate"
-title: "Webcampak 3.0 est 'feature complete'"
-date: 2016-08-15 10:00:00+00:00
-teaser: "Après presque 18 mois à travailler sur la nouvelle mouture du Webcampak, nous nous approchons de la fin du dévelopement"
+title: "Webcampak 3.0 en production - Le transfer de fichiers"
+date: 2016-10-20 10:00:00+00:00
+teaser: "Depuis mi-Août nous testions la version 3 du Webcampak pour nous assurer qu'elle était prête pour son entrée en production"
 header:
-    image_fullwidth: "header_typewriter.jpg"
-    caption: Image by Florian Klauer
-    caption_url: "http://florianklauer.de/"
+    image_fullwidth: "webcampak-to-pictures.png"
+    caption: Un de nos Webcampak de test
+    caption_url: "http://www.webcampak.com"
 image:
-    thumb:  typewriter_thumb.jpg
-    homepage: homepage_typewriter.jpg
+    thumb:  webcampak-to-pictures_thumb.png
+    homepage: webcampak-to-pictures.png
 categories:
     - corporate
+    - software
 comments: false
 show_meta: true
 ---
 
-Comme avez put le constater, la mise à jour vers la version 3.0 a pris beaucoup plus de temps que prévu. Durant cette migration, nous avons changé de nombreux éléments clefs du système.
+Après de nombreuses ré-installations, redémarrages et coupures (controllées et impromptues) nous avons maintenant un système aussi stable que la version précédente, tout en amenant de nombreuses améliorations.
 
-Le Webcampak est divisé en plusieurs composants, chacuns ayant un rôle précis dans le système.
+Ce billet est le premier d'une série détaillant les nouvelles fonctionalités de cette nouvelle version du Webcampak.
 
-## Le fonctionement interne
+## Transfer de fichiers
 
-### L'interface graphique
-L'interface a été entièrement ré-écrite pour devenir plus modulaire, structurée et permettre l'ajout plus facile de nouvelles fonctionalités.
+Nous avons maintenant deux modes pour le transfer de fichier:
 
-Le framework Sencha Extjs/Touch 4.x a été remplacé par Sencha Extjs 6.x.
+* le mode __série__, envoyant les fichiers dès leur capture par le Webcampak. Cette fonctionalité est la même que précédemment, après les manipulations choisies, les fichiers sont envoyés sur le serveur distant de votre choix.
+* le mode __xfer__, place les fichiers dans une file d'attente et les envoie à la vitesse permise par la bande passsante disponible.
 
-### L'API
-Précédemment basée sur un framework PHP custom, l'API a été entièrement ré-écrite et est maintenant basée sur le framework Symfony.
+Ces deux modes fonctionnent en FTP, mais nous pouvons à tout instant, et simplement, ajouter de nouveaux modes de connexion.
 
-## Le Core
-La capture d'image est les opérations internes sont gérés par un coeur en Python, l'ensemble a été lui aussi ré-écrit et le framework CLI Cement est maintenant utilisé pour les appels à ces outils faisant parti du coeur du Webcampak.
+[![]({{ site.urlimg }}webcampak.xfer.to_600x194.png)]({{ site.urlimg }}webcampak.xfer.to.png)
 
-Cette ré-écriture nous a aussi permis de nettoyer le code et enlever des fonctionalités qui n'étaient pas utilisées.
+Ce nouveau mode __xfer__ répond à deux problématiques que nous avons rencontrés sur nos projets, les périodes de fortes augmentation du rythme de capture et les dégradations temporaires de la connectivité réseau.
 
-### La Base de Données
+### Augmentation du rythme de capture
 
-Nous essayons au maximum de limiter les dépendences à la base de données, mais elle reste nécessaire pour toute la partie base utilisateurs et authorisations. Nous avons migré la base de données de MySQL vers SQLite, ce qui rend l'ensemble un peu plus léger.
+Durant certaines phases du projet nos clients souhaitent parfois fortement augmenter la cadence de prise de clichés (par exemple un cliché toutes les 20 secondes). 
+En mode série et pour éviter l'engorgement du système, il était nécessaire de s'assurer que l'ensemble du processus de capture soit terminé avant de démarrer le suivant. Et, selon le mode de capture sélectionné, la connectivitié réseau pouvait se révéler bloquante. 
 
-## Les fonctionalités
+Précédemment nous contournions de problème en désactivant temporairement l'envoi de fichier (nos Webcampak ont habituellement entre 250GB et 500GB de stockage local) pour ensuite re-synchroniser le tout progressivement. 
 
-Mais ce qui vous intéressera probablement le plus sont les nouvelles fonctionalités et les changements du Webcampak qui vous impacterons au jour le jour.
+Ce nouveau mode permettra d'éviter de réaliser ces ajustements, le système continuera d'envoyer au rythme préalablement sélectionné, seule la taille de la file d'attente augmentera.
 
-Nous détaillerons prochainement ces différents changements, mais pour faire simple, un effort important a été dédié à rendre la gestion d'un ou d'une flotte de Webcampak plus simple, ainsi que de simplifier la gestion des incidents (panné réseau par exemple), voici une rapide liste de ces changements.
+### Dégradations de la connectivité réseau
 
-### Rapports de synchronisation
-Le Webcampak est maintenant en mesure de comparer les photos qu'il a stocké en interne à une source distance. Et si des différences sont trouvés, l'utilisateur peut décider de transférer les fichiers manquants.
+Ce problème est de loin le plus problématique car difficile à prévoir car non lié à nos infrastructure. Il est arrivé pour certains Webcampak que la bande passante baisse très fortement, ce qui en plus de retarder l'arrivée des clichés, créé un engorgement des resources sur le Webcampak en lui même.
 
-Ces rapports peuvent êtres générés à n'importe quel moment, et peuvent par exemple êtres utilisés pour re-synchroniser un nombre important de fichiers après une panne réseau.
+Bien qu'étant équippé depuis de nombreuses versions d'un mécanisme permettant de décider combien de fois tenter l'envoi d'un cliché avant d'abandonner, la baisse de performances représente un challenge problématique dans le sens où l'envoi des clichés est fonctionnel. 
+Le Webcampak n'avait donc pas conscience de cette difficulté (une coupure réseau est par contre facile à traiter et ne posait pas de problèmes) et commençait à empiler les processus de capture jusqu'à saturation.
 
-### Xfer
-La fonctionalité Xfer est une file d'attente pour les transfer de fichiers. Précédemment le transfer de fichier était sérialisé à la capture, avec Xfer ce transfer se déroule en parralèle des captures et vous permet de transférer à un rythme défini sans risquer de saturer le Webcampak.
+### Fonctionnement du mode Xfer
 
-Cette fonctionalité permet aussi de capturer, pour de courtes périodes, à un taux plus important que la bande passante disponible. La file d'attente Xfer se déroulant à son propre rythme.
+Lorsque ce mode de transfer est utilisé, plusieurs files d'attentes sont crées, chacune de ces files d'attendre recevra un order de traitement pour l'envoi des fichiers. Les files d'attentes sont communes à l'ensemble du Webcampak et isolées des autres processus de traitement (une source envoi un ordre au système xfer, mais n'agit pas directement sur la file d'attente).
 
-### Emails
-Le système envoie dorénavant de meilleurs emails résumant la capture du jour, et pour les utilisateurs possédant plusieurs Webcampak, un seul email est envoyé chaque jour (et non un email par Webcampak comme précédemment)
+[![]({{ site.urlimg }}webcampak.sysconf_600x218.png)]({{ site.urlimg }}webcampak.sysconf.png)
 
-### Nouvelle interface mobile
-Une nouvelle interface mobile a été développée, elle fourni plus de détails sur le bon déroulement des captures et permet de réaliser quelques manipulations simples.
+La configuration se fait ensuite à plusieurs niveaux, lors de la configuration générale, nous indiquons au système le nombre des files d'attentes que nous voulons créer, et le nombre maximum de fichiers que peut contenir chaque file d'attente.
 
-## Et Ensuite ?
+Ces paramètres varieront en fonction du type de matériel sur lequel le Webcampak est installé. Un serveur cloud controllant 50 Webcampak aura des réglages différents d'un Webcampak installé sur un chantier.
 
-Nous allons maintenant entrer un phase de correction de bugs, et préparer Webcampak 3.0 pour son entrée en production. Une grande étape a été franchie !
+Ensuite lors de l'ajout d'un serveur distant, vous pourrez choisir d'activer le mode xfer et pourrez définir combien ce serveur distant pourra supporter d'envoie en parrallèle.
+
+Le système s'assurera ensuite de répartir la charge de travail entre les différentes files d'attentes tout en respectant la configuration choisie.
+
+[![]({{ site.urlimg }}webcampak.xfer.to_600x194.png)]({{ site.urlimg }}webcampak.xfer.to.png)
+
+Par exemple, sur la capture d'écran ci-dessus, vous pouvez constater que le système dispose de 3 files d'attentes de configurées mais seules 2 sont utilisés.
+
+### Avantages, Inconvénients
+
+Le système xfer se révèle particulièrement intéressant dans les cas où la connectivité réseau peut être instable ou insuffisante pour transférer les clichés en temps réel. 
+
+Il entraine néanmoins un possible délais dans l'envoi des clichés (par exemple si la file d'attente contient déjà des clichés) et une très légère augmentation de l'utilisation des resources locales.
+
+Nous recommendons d'utiliser le mode xfer dans la majeure partie des cas, seuls certains cas précis tels que l'envoi d'une image "live" sur un site Web, font que le mode série conserve sa pertinence et c'est pourquoi le Webcampak conserve ces deux modes.
