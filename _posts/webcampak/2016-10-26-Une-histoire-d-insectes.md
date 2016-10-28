@@ -31,7 +31,7 @@ Cette procédure limite l'interruption et nous permet aussi de revenir en arriè
 Mais parfois tout ne se passe pas comme prévu ...
 
 
-## Syncrhonisation des clichés
+## Synchronisation des clichés
 
 Nous avons donc commencé à transférer les clichés, mais maintenant que nous avons cette fonctionalité de synchronisation des clichés, nous avons décidé de l'utiliser à la place de [Rsync](https://fr.wikipedia.org/wiki/Rsync).
 
@@ -47,7 +47,7 @@ Aucuns problèmes lors des différents tests de transfer, dans les deux sens (di
 
 Revenons donc au sujet de ce billet, l'étape suivante consistait donc à sauvegarder une "vraie" source, un projet en cours et ses plus de 58300 clichés pour plus de 200GB (ci-dessous).
 
-[![]({{ site.urlimg }}webcampak.sync.large_600x232)]({{ site.urlimg }}webcampak.sync.large_600x232)
+[![]({{ site.urlimg }}webcampak.sync.large_600x232.png)]({{ site.urlimg }}webcampak.sync.large.png)
 
 Etant confiant, autant lancer quelques synchronisations en parralèlle pour les différents clients à migrer.
 
