@@ -24,7 +24,7 @@ Comme vous le savez peut être, nous sommes actuellement en train de migrer nos 
 
 Nous avons donc plusieurs terabytes de données à transférer entre nos serveurs. Pour limiter les risques d'incidents et d'interruptions, nous réalisons une migration Active/Active. 
 
-La procédure est la suivante; nous installons le Webcampak sur un nouveau serveur, réalisons un duplicat des fichiers, reconfigurons le Webcampak distant pour envoyer les clichés vers le nouveau serveur à la place de l'ancien. Puis réalisons une nouvelle synchronisation des fichiers pour transférer les derniers clichés.
+La procédure est la suivante; nous installons le Webcampak sur un nouveau serveur, réalisons un duplicata des fichiers, reconfigurons le Webcampak distant pour envoyer les clichés vers le nouveau serveur à la place de l'ancien. Puis réalisons une nouvelle synchronisation des fichiers pour transférer les derniers clichés.
 
 Cette procédure limite l'interruption et nous permet aussi de revenir en arrière facilement. 
 
