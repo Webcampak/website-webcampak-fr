@@ -3,7 +3,7 @@ layout: page
 subheadline: "Software"
 title: "Une histoire d'insecte ... et de migration."
 date: 2016-10-26 10:00:00+00:00
-teaser: "Avant toute mise en production nous testons l'ensemble des compostants autant que possible. Parfois, tout ne se passe pas comme prévu..."
+teaser: "Avant toute mise en production nous testons l'ensemble des composants autant que possible. Parfois, tout ne se passe pas comme prévu..."
 header:
     image_fullwidth: "webcampak-to-pictures.png"
     caption: Un de nos Webcampak de test
