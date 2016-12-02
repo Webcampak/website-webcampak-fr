@@ -1,0 +1,71 @@
+---
+layout: page
+subheadline: "Software"
+title: "Mecanisme d'alerte automatisé"
+date: 2016-12-01 10:00:00+00:00
+teaser: "La clef du succès d'un project timelapse consiste à ne manquer ou ne perdre aucune image pendant toute la durée de l'installation. Les mécanismes d'alerte jouent un rôle clef car ils vous permette d'être informés du moindre soucis de capture. Dans ce billet nous allons détailler comment le Webcampak gère cet aspect et les améliorations que nous avons apporté au système."
+header:
+    image_fullwidth: "webcampak-to-alerts.png"
+    caption: Configuration des alertes Webcampak
+    caption_url: "http://www.webcampak.com"
+image:
+    thumb:  webcampak-to-pictures_thumb.png
+    homepage: webcampak-to-alerts.png
+categories:
+    - alertes
+    - software
+comments: false
+show_meta: true
+---
+
+Nous avons rapidement compris lorsque nous avons dévelopé le système que la gestion des alertes est un aspect tout aussi critique que sensible à mettre en place. Trop d'alertes créé une accoutumance (et diminue le niveau d'attention de la personne recevant les alertes, pas assez entraine des problématiques pertes de clichés). 
+
+# Webcampak 2
+
+Lors de nos précédentes versions, la gestion des alertes en série sur les captures d'images était très efficace. La configuration se faisait sur trois points:
+
+* Définir le seuil d'alerte à partir duquel une alerte est envoyée (après X échecs de capture)
+* Définir à quel fréquence envoyer un rappel
+* Définit si l'on souhaite être alerté à chaque rétablissement de la capture (même si on reste sous le seuil d'alerte).
+
+Tel que mentionné ci-dessus, aucune difficulté pour générer des alertes sur la source directement connecté à l'appareil photo. La capture a fonctionné ou non, c'est aussi simple que ça.
+
+Là où le Webcampak manquait de flexibilité concernait les sources de consolidations, en particulier les sources distantes. Par exemple, un Webcampak sur site, capture à deux rythmes différents et envoi ses clichés sur le Cloud. Comment gérer cette différence de planning et aussi prendre en compte de possibles retard dus au réseau.
+
+La configuration des alertes sur le cloud devenait un jeu d'équilibriste demandant de la précision, pour éviter l'envoi de faux positifs (envoi d'une alerte non nécessaire).
+
+# Webcampak 3
+
+Nous avons donc réfléchi et implémenté une meilleure solution. Dorénavant la configuration des alertes se fait sur deux modes:
+
+* Sur un retard de capture
+* Sur un planning pré-défini
+
+## Alerte sur retard de capture
+
+Ce mode permet de configurer le Webcampak dans les conditions les plus simple et reprend le même concept que le Webcampak 2.
+
+A chaque vérification, le système calcule le temps écoulé depuis la dernière capture. Si ce temps est au dessus du seuil configuré, une alerte est envoyée.
+
+Un rappel est lui envoyé un certain nombre de minutes après le dernier échec.
+
+## Alerte sur calendrier
+
+Le second mode consiste à définir à l'avance un calendrier de capture. Le système se chargera de vérifier si les clichés sont présents au moment souhaité.
+
+Ce mode permet de gérer facilement un nombre illimité de rythmes de capture différents sur une même source. L'utilisateur configure simplement le seuil d'alerte sous form de créneaux de capture manqués.
+
+Un rappel peut ensuite être envoyé tous les X créneaux manqués.
+
+Pour plus de souplesse une période de grâce est disponible, elle permet de retarder la déclaration d'une alerte dans les cas où l'image prends un certain temps à être disponible (en cas de transfer réseau par exemple). 
+
+## Deux modes compatibles
+
+Les deux modes peuvent être utilisés simultanément. Il est par exemple possible de configurer le système pour déclencher une alerte sur la base du calendrier, plus envoyer un reminder toutes les heures (sur base du retard de capture), le tout pour plus de souplesse.
+
+# Conclusion
+
+Cette nouvelle fonctionalité permet de rendre la déclaration des alertes plus simple et aussi plus pertinente, en particulier pour les sources distantes.
+
+Couplé à l'envoi journalier des statistiques de captures il devient quasiment impossible de rater tout problème potentiel tout en évitant de recevoir trop d'emails. 
+
