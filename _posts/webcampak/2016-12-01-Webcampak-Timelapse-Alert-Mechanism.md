@@ -18,7 +18,7 @@ comments: false
 show_meta: true
 ---
 
-Nous avons rapidement compris lorsque nous avons dévelopé le système que la gestion des alertes est un aspect tout aussi critique que sensible à mettre en place. Trop d'alertes créé une accoutumance (et diminue le niveau d'attention de la personne recevant les alertes, pas assez entraine des problématiques pertes de clichés). 
+Nous avons rapidement compris, lorsque nous avons dévelopé le système, que la gestion des alertes est un aspect tout aussi critique que sensible à mettre en place. Trop d'alertes créé une accoutumance (et diminue le niveau d'attention de la personne recevant les alertes), pas assez entraine des problématiques pertes de clichés. 
 
 # Webcampak 2
 
@@ -28,30 +28,30 @@ Lors de nos précédentes versions, la gestion des alertes en série sur les cap
 * Définir à quel fréquence envoyer un rappel
 * Définit si l'on souhaite être alerté à chaque rétablissement de la capture (même si on reste sous le seuil d'alerte).
 
-Tel que mentionné ci-dessus, aucune difficulté pour générer des alertes sur la source directement connecté à l'appareil photo. La capture a fonctionné ou non, c'est aussi simple que ça.
+Aucune difficulté pour générer des alertes sur la source directement connecté à l'appareil photo, la capture a fonctionné ou non, c'est aussi simple que ça.
 
-Là où le Webcampak manquait de flexibilité concernait les sources de consolidations, en particulier les sources distantes. Par exemple, un Webcampak sur site, capture à deux rythmes différents et envoi ses clichés sur le Cloud. Comment gérer cette différence de planning et aussi prendre en compte de possibles retard dus au réseau.
+Là Webcampak manquait par contre de flexibilité sur les sources de consolidation, en particulier les sources distantes. Par exemple, un Webcampak sur site, capture à deux rythmes différents et envoi ses clichés sur le Cloud. Comment gérer cette différence de planning tout en prenant en compte de possibles retard causés par le réseau ?
 
-La configuration des alertes sur le cloud devenait un jeu d'équilibriste demandant de la précision, pour éviter l'envoi de faux positifs (envoi d'une alerte non nécessaire).
+Pour éviter l'envoi de faux positifs, la configuration des alertes sur le cloud devenait un jeu d'équilibriste demandant de la précision. 
 
 # Webcampak 3
 
-Nous avons donc réfléchi et implémenté une meilleure solution. Dorénavant la configuration des alertes se fait sur deux modes:
+Nous avons donc réfléchi à une meilleure manière de réaliser cette configuraiton et d'envoyer les alertes corresondantes. La configuration peut dorénavant se réaliser de deux manières: 
 
 * Sur un retard de capture
-* Sur un planning pré-défini
+* Sur un calendrier
 
 ## Alerte sur retard de capture
 
-Ce mode permet de configurer le Webcampak dans les conditions les plus simple et reprend le même concept que le Webcampak 2.
+Ce mode est le plus simple à configurer et reprend un concept très similaire au Webcampak 2. 
 
-A chaque vérification, le système calcule le temps écoulé depuis la dernière capture. Si ce temps est au dessus du seuil configuré, une alerte est envoyée.
+A intervale régulier le système calcule le temps écoulé depuis la dernière capture. Si ce temps se situe au dessus du seuil configuré, une alerte est envoyée.
 
-Un rappel est lui envoyé un certain nombre de minutes après le dernier échec.
+Le système continue ensuite à vérifier l'état de la source, puis renvoie un email de rappel à intervale régulier jusque au retour en fonctionnement du système.
 
 ## Alerte sur calendrier
 
-Le second mode consiste à définir à l'avance un calendrier de capture. Le système se chargera de vérifier si les clichés sont présents au moment souhaité.
+Le second mode consiste à définir à l'avance un calendrier de capture et vérifier que les images sont correctement présentes au moment souhaité. 
 
 Ce mode permet de gérer facilement un nombre illimité de rythmes de capture différents sur une même source. L'utilisateur configure simplement le seuil d'alerte sous form de créneaux de capture manqués.
 
