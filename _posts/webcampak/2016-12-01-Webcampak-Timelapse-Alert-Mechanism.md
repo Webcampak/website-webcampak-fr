@@ -51,13 +51,13 @@ Le système continue ensuite à vérifier l'état de la source, puis renvoie un 
 
 ## Alerte sur calendrier
 
-Le second mode consiste à définir à l'avance un calendrier de capture et vérifier que les images sont correctement présentes au moment souhaité. 
+Le second mode consiste à définir à l'avance un calendrier de capture et vérifier que les images soient présentes au moment souhaité. 
 
-Ce mode permet de gérer facilement un nombre illimité de rythmes de capture différents sur une même source. L'utilisateur configure simplement le seuil d'alerte sous form de créneaux de capture manqués.
+En configurant le seuil d'alerte sous forme de créneaux de capture manqués, ce mode permet de gérer facilement un nombre illimité de rythmes de captures différents sur une même source.
 
-Un rappel peut ensuite être envoyé tous les X créneaux manqués.
+Là aussi, le système configure à vérifier l'état de la source et renvoir un email de rappel à intervale régulier.
 
-Pour plus de souplesse une période de grâce est disponible, elle permet de retarder la déclaration d'une alerte dans les cas où l'image prends un certain temps à être disponible (en cas de transfer réseau par exemple). 
+Il est aussi possible de définir une période de "grace", pour retarder la déclaration d'une alerte en cas de retard dans la transmission de l'image. 
 
 ## Deux modes compatibles
 
@@ -67,5 +67,5 @@ Les deux modes peuvent être utilisés simultanément. Il est par exemple possib
 
 Cette nouvelle fonctionalité permet de rendre la déclaration des alertes plus simple et aussi plus pertinente, en particulier pour les sources distantes.
 
-Couplé à l'envoi journalier des statistiques de captures il devient quasiment impossible de rater tout problème potentiel tout en évitant de recevoir trop d'emails. 
+Couplé à l'envoi journalier des statistiques de captures il devient quasiment impossible de rater un incident, ceci sans recevoir trop d'emails. 
 
