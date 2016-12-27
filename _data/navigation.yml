@@ -21,13 +21,6 @@
 - title: Documentation
   url: "/documentation/"
   side: left
-  dropdown:
-  - title: Documentation
-    url: "/documentation/"
-  - title: "Changelog"
-    url: "/changelog/"
-  - title: "Roadmap"
-    url: "/roadmap/"
 
 - title: Blog
   url: "/blog/"

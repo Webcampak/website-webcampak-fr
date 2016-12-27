@@ -1,6 +1,6 @@
 ---
 layout: page
-subheadline: "Software"
+subheadline: "Logiciel"
 title: "Suivi des versions Webcampak"
 date: 2016-11-21 10:00:00+00:00
 teaser: "Nous en sommes à notre second version du Webcampak 3. Moment idéal pour préciser un peu plus notre plan concernant les versions Webcampak."
@@ -12,8 +12,8 @@ image:
     thumb:  webcampak-to-pictures_thumb.png
     homepage: webcampak-to-pictures.png
 categories:
-    - bug
-    - software
+    - versions
+    - logiciel
 comments: false
 show_meta: true
 ---

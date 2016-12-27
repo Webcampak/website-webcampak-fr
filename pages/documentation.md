@@ -14,5 +14,5 @@ Webcampak est en évolution constante, nous essayons néanmoins de maintenir une
 
 Notre documentation est hébergée sur une section dédiée de notre site Internet.
 
-* [Webcampak 1.x Documentation](http://doc.webcampak.com/webcampak1.x/en/)
-* [Webcampak 2.x Documentation](http://doc.webcampak.com/webcampak2.x/en/)
+* [Documentation Webcampak 1.x](http://doc.webcampak.com/webcampak1.x/en/)
+* [Documentation Webcampak 2.x](http://doc.webcampak.com/webcampak2.x/en/)

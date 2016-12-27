@@ -13,7 +13,7 @@ image:
     homepage: webcampak-to-pictures.png
 categories:
     - corporate
-    - software
+    - logiciel
 comments: false
 show_meta: true
 ---

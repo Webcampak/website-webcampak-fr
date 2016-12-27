@@ -12,7 +12,7 @@ image:
     thumb:  blog/2015/07/webcampak-login_150x150.jpg
     homepage: blog/2015/07/webcampak-login-large.png
 categories:
-    - software
+    - logiciel
 comments: false
 show_meta: true
 ---

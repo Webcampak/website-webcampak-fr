@@ -1,6 +1,6 @@
 ---
 layout: page
-subheadline: "Software"
+subheadline: "Logiciel"
 title: "Mecanisme d'alerte automatisé"
 date: 2016-12-01 10:00:00+00:00
 teaser: "La clef du succès d'un project timelapse consiste à ne manquer ou ne perdre aucune image pendant toute la durée de l'installation. Les mécanismes d'alerte jouent un rôle clef car ils vous permette d'être informés du moindre soucis de capture. Dans ce billet nous allons détailler comment le Webcampak gère cet aspect et les améliorations que nous avons apporté au système."
@@ -13,12 +13,12 @@ image:
     homepage: webcampak-to-alerts.png
 categories:
     - alertes
-    - software
+    - logiciel
 comments: false
 show_meta: true
 ---
 
-Nous avons rapidement compris, lorsque nous avons dévelopé le système, que la gestion des alertes est un aspect tout aussi critique que sensible à mettre en place. Trop d'alertes créé une accoutumance (et diminue le niveau d'attention de la personne recevant les alertes), pas assez entraine des problématiques pertes de clichés. 
+Nous avons rapidement compris, lorsque nous avons dévelopé le système, que la gestion des alertes est un aspect tout aussi critique que sensible à mettre en place. Trop d'alertes créé une accoutumance (et diminue le niveau d'attention de la personne recevant les alertes), pas assez peut entrainer des pertes de clichés. 
 
 # Webcampak 2
 

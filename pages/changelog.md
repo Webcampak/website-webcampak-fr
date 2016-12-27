@@ -5,10 +5,15 @@ header:
    image_fullwidth: "blog/2015/07/webcampak-code.png"
 permalink: "/changelog/"
 ---
-_Page disponible en Anglais uniquement_
+_Cette page n'est que partiellement disponible en français_
 
 # Changelog (v3.x):
-Coming soon
+
+__V3.1.x__
+* Déseialization du transfer de fichiers
+* Création de rapports de synchronization des fichiers
+* Amélioration du système de gestion des alertes
+
 
 # Changelog (v2.x):
 __v2.0-b94__
