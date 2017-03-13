@@ -12,13 +12,13 @@ redirect_from:
 
 Webcampak est en évolution constante, nous essayons néanmoins de maintenir une documentation précise et à jour.
 
-# Version Actuelle
+### Version Actuelle
 
 Pour le moment la documentation de notre dernière version du Webcampak est uniquement disponible en Anglais.
 
 * [Documentation Webcampak 3.x](http://doc.webcampak.com/webcampak3.x/web/en/)
 
-# Versions Précédentes
+### Versions Précédentes
 
 * [Documentation Webcampak 1.x](http://doc.webcampak.com/webcampak1.x/en/)
 * [Documentation Webcampak 2.x](http://doc.webcampak.com/webcampak2.x/en/)
