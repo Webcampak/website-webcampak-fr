@@ -5,9 +5,6 @@ subheadline: "Serveur de démo Webcampak"
 permalink: "/demo/"
 header:
    image_fullwidth: "header_unsplash_1.jpg"
-redirect_from:
-    - /fr/demo/
-    - /demo/
 ---
 
 Un compte de démo est disponible sur un de nos serveurs pour vous donner un apperçut du système.
