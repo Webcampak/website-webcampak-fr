@@ -15,7 +15,7 @@
   side: left
 
 - title: Demo
-  url: "http://demo.webcampak.com"
+  url: "/demo/"
   side: left
 
 - title: Documentation
